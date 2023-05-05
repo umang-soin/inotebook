@@ -1,11 +1,13 @@
 const connectToMongo = require("./db");
 const express = require('express');
+const bodyParser = require('body-parser');
 
 connectToMongo();
 
 const app = express()
 const port = 3005;
 
+app.use(express.urlencoded({ extended: true }));
 // Middleware for req.body
 app.use(express.json());
 
