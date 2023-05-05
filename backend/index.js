@@ -1,6 +1,7 @@
 const connectToMongo = require("./db");
 const express = require('express');
 const bodyParser = require('body-parser');
+const bcrypt = require('bcryptjs');
 
 connectToMongo();
 
